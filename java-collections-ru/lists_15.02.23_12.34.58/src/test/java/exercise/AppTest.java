@@ -5,8 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class AppTest {
     @Test
-    void
-    testSrabble1() throws Exception {
+    void testSrabble1() throws Exception {
         boolean result = App.scrabble("rkqodlw", "woRld");
         assertThat(result).isTrue();
     }

@@ -1,22 +1,23 @@
-package exercise;
+﻿package exercise;
 
 import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 
 // BEGIN
 public class App {
 
-    public static Boolean scrabble(String symbSet, String word) {
+    public static Boolean scrabble(String symbSet, String inword) {
 
-        if (word.length() > symbSet.length()) {
+        if (inword.length() > symbSet.length()) {
             return false;
         }
 
-        word = word.toLowerCase();
-        List<Character> symbList = new ArrayList<Character>();
-        List<Character> wordList = new ArrayList<Character>();
+        String word = inword.toLowerCase();
+        List<Character> symbList = new LinkedList<>();
+        List<Character> wordList = new LinkedList<>();
 
         //convert symSet String to symbList List of chars
         for (int i = 0; i < symbSet.length(); i++) {
@@ -26,12 +27,16 @@ public class App {
         for (int i = 0; i < word.length(); i++) {
             wordList.add(word.charAt(i));
         }
-        //check if symbList is has got enough suitable symbols
-        for (char ch : wordList) {
-            if (symbList.contains(ch)) {
-                wordList.remove(ch);
+        //check if symbList has got enough suitable symbols
+        List tmp = wordList;
+        for (int i = 0; i < tmp.size(); i++){
+            if (symbList.contains(tmp.get(i))) {
+                symbList.remove(tmp.get(i));
+                wordList.remove(tmp.get(i));
             }
         }
+
+
         return wordList.isEmpty();
     }
 }

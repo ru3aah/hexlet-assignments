@@ -1,7 +1,4 @@
-﻿package exercise;
-
-import java.util.Arrays;
-import java.util.ArrayList;
+package exercise;
 import java.util.LinkedList;
 import java.util.List;
 

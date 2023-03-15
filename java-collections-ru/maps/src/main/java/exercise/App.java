@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 // BEGIN
-public class App{
+public class App {
     public static void main(String[] args) {
         String sentence = "";
         Map wordsCount = App.getWordCount(sentence);
@@ -13,19 +13,22 @@ public class App{
     }
 
     public static Map<String, Integer> getWordCount(String sentence) {
-        Map<String, Integer> hashmap = new HashMap<String, Integer>();
-        if (sentence.length() == 0) return hashmap;
+        Map<String, Integer> hashmap = new HashMap<>();
+        if (sentence.length() == 0) {
+            return hashmap;
+        }
         String[] arr = sentence.split(" ");
         for (String s : arr) {
-            hashmap.put(s, hashmap.getOrDefault(s,0) +1);
+            hashmap.put(s, hashmap.getOrDefault(s, 0) + 1);
         }
         return hashmap;
 
     }
     public static String toString(Map<String, Integer> wrdLst) {
-        String result = "{" + "\n";
+
+        String result = "{";
         for (String v : wrdLst.keySet()) {
-            result = result + "  " + v + ": " + wrdLst.get(v) + "\n";
+            result = result + "\n" + "  " + v + ": " + wrdLst.get(v) + "\n";
         }
         result = result + "}";
 

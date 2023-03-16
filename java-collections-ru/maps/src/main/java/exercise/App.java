@@ -6,7 +6,7 @@ import java.util.Map;
 // BEGIN
 public class App {
     public static void main(String[] args) {
-        String sentence = "";
+        String sentence = "java is the best java in the world of java world";
         Map wordsCount = App.getWordCount(sentence);
         System.out.println(wordsCount);
         System.out.println(App.toString(wordsCount));
@@ -25,13 +25,16 @@ public class App {
 
     }
     public static String toString(Map<String, Integer> wrdLst) {
-
-        String result = "{";
-        for (String v : wrdLst.keySet()) {
-            result = result + "\n" + "  " + v + ": " + wrdLst.get(v) + "\n";
+        String result = new String();
+        if (wrdLst.isEmpty()) {
+            result = "{}";
+        } else {
+            result = "{";
+            for (String v : wrdLst.keySet()) {
+                result = result + "\n" + "  " + v + ": " + wrdLst.get(v);
+            }
+            result = result + "\n}";
         }
-        result = result + "}";
-
         return result;
 
     }

@@ -13,7 +13,6 @@ class AppTest {
         // BEGIN
         List<Integer> listFull = Arrays.asList(1, 2, 3, 4, 5);
         List<Integer> listRight = Arrays.asList(1, 2, 3);
-        List<Integer> listEmpty = ArraayList<>();
         List<Integer> listEmpty = new ArrayList<>();
         int elemQtyNorm = 3;
         int elemQtyExceed = 7;

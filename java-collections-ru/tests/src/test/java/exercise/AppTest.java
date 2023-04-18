@@ -15,10 +15,10 @@ class AppTest {
         List<Integer> listEmpty = new ArrayList<>();
         int elemQtyNorm = 3;
         int elemQtyExceed = 7;
-        assertThat(take(listFull, elemQtyNorm)).isEqualTo(1, 2, 3);
-        assertThat(take(listFull, elemQtyExceed)).isEqalTo(1, 2, 3, 4, 5);
-        assertThat(take(listFull, 0)).isEqualTo();
-        assertThat(take(listEmpty, elemQtyNorm)).isEqualTo();
+        assertThat(App.take(listFull, elemQtyNorm)).isEqualTo(1, 2, 3);
+        assertThat(App.take(listFull, elemQtyExceed)).isEqalTo(1, 2, 3, 4, 5);
+        assertThat(App.take(listFull, 0)).isEqualTo();
+        assertThat(App.take(listEmpty, elemQtyNorm)).isEqualTo();
         // END
     }
 }

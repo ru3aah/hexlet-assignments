@@ -12,13 +12,15 @@ class AppTest {
     void testTake() {
         // BEGIN
         List<Integer> listFull = Arrays.asList(1, 2, 3, 4, 5);
+        List<Integer> listRight = Arrays.asList(1, 2, 3);
+        List<Integer> listEmpty = ArraayList<>();
         List<Integer> listEmpty = new ArrayList<>();
         int elemQtyNorm = 3;
         int elemQtyExceed = 7;
-        assertThat(App.take(listFull, elemQtyNorm)).isEqualTo(1, 2, 3);
-        assertThat(App.take(listFull, elemQtyExceed)).isEqalTo(1, 2, 3, 4, 5);
-        assertThat(App.take(listFull, 0)).isEqualTo();
-        assertThat(App.take(listEmpty, elemQtyNorm)).isEqualTo();
+        assertThat(App.take(listFull, elemQtyNorm)).isEqualTo(listRight);
+        assertThat(App.take(listFull, elemQtyExceed)).isEqalTo(listFull);
+        assertThat(App.take(listFull, 0)).isEqualTo(listEmpty);
+        assertThat(App.take(listEmpty, elemQtyNorm)).isEqualTo(listEmpty);
         // END
     }
 }

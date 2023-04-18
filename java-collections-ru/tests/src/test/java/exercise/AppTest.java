@@ -17,8 +17,8 @@ class AppTest {
         int elemQtyExceed = 7;
         assertThat(take(listFull, elemQtyNorm)).isEqualTo(1, 2, 3);
         assertThat(take(listFull, elemQtyExceed)).isEqalTo(1, 2, 3, 4, 5);
-        assertThat(take(listFull, 0)).isEmpty;
-        assertThat(take(listEmpty, elemQtyNorm)).isEmpty;
+        assertThat(take(listFull, 0)).isEqualTo();
+        assertThat(take(listEmpty, elemQtyNorm)).isEqualTo();
         // END
     }
 }

@@ -2,7 +2,7 @@ package exercise;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import java.util.List;
-//import java.util.Arrays;
+import java.util.Arrays;
 import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ class AppTest {
     @Test
     void testTake() {
         // BEGIN
-        List<Integer> listFull = new ArrayList<>(1, 2, 3, 4, 5);
+        List<Integer> listFull = Arrays.asList(1, 2, 3, 4, 5);
         List<Integer> listEmpty = new ArrayList<>();
         int elemQtyNorm = 3;
         int elemQtyExceed = 7;

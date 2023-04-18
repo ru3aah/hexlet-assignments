@@ -11,8 +11,8 @@ class AppTest {
     @Test
     void testTake() {
         // BEGIN
-       int List listFull = new ArrayList<>(1,2,3,4,5);
-       int List listEmpty = new ArrayList<>();
+       List<Integer> listFull = new ArrayList<>(1,2,3,4,5);
+       List<Integer> listEmpty = new ArrayList<>();
        int elemQtyNorm = 3;
        int elemQtyExceed = 7;
        assertThat(take(listFull, elemQtyNorm)).isEqualTo(1,2,3);

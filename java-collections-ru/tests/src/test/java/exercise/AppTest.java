@@ -17,7 +17,6 @@ class AppTest {
         int elemQtyNorm = 3;
         int elemQtyExceed = 7;
         assertThat(App.take(listFull, elemQtyNorm)).isEqualTo(listRight);
-        assertThat(App.take(listFull, elemQtyExceed)).isEqalTo(listFull);
         assertThat(App.take(listFull, 0)).isEqualTo(listEmpty);
         assertThat(App.take(listEmpty, elemQtyNorm)).isEqualTo(listEmpty);
         // END

@@ -25,7 +25,7 @@ public class Flat implements Home {
     public java.lang.String toString() {
         return "Квартира площадью " + getArea() +
                 " на " + getFloor() +
-                ' этаже';
+                " этаже";
     }
 
     public int compareTo(Flat flat2) {

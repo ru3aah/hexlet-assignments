@@ -26,9 +26,9 @@ public class Cottage implements Home {
 
     public int compareTo(Home another) {
         switch (this.getArea() - another.getArea()) {
-            case > 0 : return 1;
-            case = 0 : return 0;
-            case < 0 : return -1;
+            case >0 -> 1;
+            case ==0 -> 0;
+            case <0 -> 1;
         }
     }
 }

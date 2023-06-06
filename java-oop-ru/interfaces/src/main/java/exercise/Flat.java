@@ -30,9 +30,9 @@ public class Flat implements Home {
 
     public int compareTo(Flat flat2) {
         switch (this.getArea() - flat2.getArea()) {
-           case > 0 : return 1;
-           case = 0 : return 0;
-           case < 0 : return -1;
+           case >0 -> 1;
+           case ==0 -> 0;
+           case <0 -> 1;
         }
     }
 }

@@ -1,5 +1,8 @@
 package exercise;
 
+import java.lang.reflect.AnnotatedParameterizedType;
+import java.lang.reflect.MalformedParameterizedTypeException;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -10,10 +13,10 @@ public class App {
 
 
         return apartments.stream()
-                .sorted(apartments -> apartments.getArea())
+                .sorted(Home::compareTo)
                 .limit(n)
-                .forEach(apartments -> apartments.toString())
-                .collect(Collectors.toList());
+                .map(Home::toString)
+                .toList();
     }
 }
 // END

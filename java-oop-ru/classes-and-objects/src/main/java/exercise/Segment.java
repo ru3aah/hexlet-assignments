@@ -21,8 +21,8 @@ public class Segment {
     }
 
     public Point getMidPoint() {
-        var midX = end.getX() - begin.getX();
-        var midY = end.getY() - begin.getY();
+        var midX = (end.getX() - begin.getX())/2;
+        var midY = (end.getY() - begin.getY())/2;
 
         return new Point(midX, midY);
     }

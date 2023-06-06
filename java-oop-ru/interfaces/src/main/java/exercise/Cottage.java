@@ -20,7 +20,7 @@ class Cottage implements Home {
 
     public String toString() {
         return getFloorCount() + " этажный коттедж площадью "
-                + getArea() + " метров.";
+                + getArea() + " метров";
     }
 
     public int compareTo(Home another) {

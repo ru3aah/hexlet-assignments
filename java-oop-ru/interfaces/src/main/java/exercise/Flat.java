@@ -23,7 +23,7 @@ class Flat implements Home {
 
     public String toString() {
         return "Квартира площадью " + getArea() +
-                " на " + getFloor() + " этаже";
+                " метров на " + getFloor() + " этаже";
     }
 
     public int compareTo(Home another) {

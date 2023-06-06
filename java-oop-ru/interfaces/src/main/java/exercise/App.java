@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 // BEGIN
 public class App {
 
-    public static List<String> buildAppartmentsList(List<Home> apartments, int n) {
+    public static List<String> buildApartmentsList(List<Home> apartments, int n) {
 
 
         return apartments.stream()

@@ -27,33 +27,31 @@ class Validator {
         }
         return nullFields;
     }
-    /*
-    public static Map<String, List<String>> advanceValidate(Address address)
-            throws IllegalAccessException {
-        Map<String, List<String>> result = new HashMap<>();
-        List<String> errorList = new ArrayList<>();
-        for (Field f : address.getClass().getDeclaredFields()) {
-            errorList.clear();
-            if ((f.getAnnotation(NotNull.class).getClass())
-                    .equals(NotNull.class)) {
-                if (Objects.isNull(f.get(new Object()))) {
-                    errorList.add("is null");
-                }
-            }
-            if (!f.isAccessible()) {
-                f.setAccessible(true);
-            }
-            String value = (String) f.get(new Object());
-            if (value.length() < f.getAnnotation(MinLength.class).minLength()) {
-                errorList.add("length is less than allowed minimum");
-            }
-            if (!errorList.isEmpty()) {
-                result.put(f.getName(), errorList);
-            }
-        }
-        return result;
-    }
-
-     */
+    // public static Map<String, List<String>> advanceValidate(Address address)
+    //         throws IllegalAccessException {
+    //     Map<String, List<String>> result = new HashMap<>();
+    //     List<String> errorList = new ArrayList<>();
+    //     for (Field f : address.getClass().getDeclaredFields()) {
+    //         errorList.clear();
+    //         if ((f.getAnnotation(NotNull.class).getClass())
+    //                 .equals(NotNull.class)) {
+    //             if (Objects.isNull(f.get(new Object()))) {
+    //                 errorList.add("is null");
+    //             }
+    //         }
+    //         if (!f.isAccessible()) {
+    //             f.setAccessible(true);
+    //         }
+    //         String value = (String) f.get(new Object());
+    //         if (value.length() < f.getAnnotation(MinLength.class).minLength()) {
+    //             errorList.add("length is less than allowed minimum");
+    //         }
+    //         if (!errorList.isEmpty()) {
+    //             result.put(f.getName(), errorList);
+    //         }
+    //     }
+    //     return result;
+    // }
+    //
 }
 // END

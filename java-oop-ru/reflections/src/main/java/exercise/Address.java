@@ -3,19 +3,17 @@ package exercise;
 class Address {
     // BEGIN
     @NotNull
-    @MinLength(4)
+    @MinLength()
     // END
     private String country;
 
     // BEGIN
     @NotNull
-    @MinLength(2)
     // END
     private String city;
 
     // BEGIN
     @NotNull
-    @MinLength(3)
     // END
     private String street;
 

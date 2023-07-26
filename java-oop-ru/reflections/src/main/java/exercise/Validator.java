@@ -2,10 +2,8 @@ package exercise;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Objects;
 import java.util.List;
-import java.util.Map;
+import java.util.Objects;
 
 // BEGIN
 class Validator {
@@ -29,6 +27,7 @@ class Validator {
         }
         return nullFields;
     }
+    /*
     public static Map<String, List<String>> advanceValidate(Address address)
             throws IllegalAccessException {
         Map<String, List<String>> result = new HashMap<>();
@@ -54,5 +53,7 @@ class Validator {
         }
         return result;
     }
+
+     */
 }
 // END

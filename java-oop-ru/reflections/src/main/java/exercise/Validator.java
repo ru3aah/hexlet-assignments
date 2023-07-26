@@ -15,7 +15,8 @@ class Validator {
         try {
             for (Field f : address.getClass().getDeclaredFields()) {
                 try {
-                    if ((f.getAnnotation(NotNull.class).getClass()).equals(NotNull.class)) {
+                    if ((f.getAnnotation(NotNull.class).getClass())
+                            .equals(NotNull.class)) {
                         if (Objects.isNull(f.get(new Object()))) {
                             nullFields.add(f.getName());
                         }
@@ -29,12 +30,14 @@ class Validator {
         }
         return nullFields;
     }
-    public static Map<String, List<String>> advanceValidate(Address address) throws IllegalAccessException {
+    public static Map<String, List<String>> advanceValidate(Address address)
+            throws IllegalAccessException {
         Map<String, List<String>> result = new HashMap<>();
         List<String> errorList = new ArrayList<>();
         for (Field f : address.getClass().getDeclaredFields()) {
             errorList.clear();
-            if ((f.getAnnotation(NotNull.class).getClass()).equals(NotNull.class)) {
+            if ((f.getAnnotation(NotNull.class).getClass())
+                    .equals(NotNull.class)) {
                 if (Objects.isNull(f.get(new Object()))) {
                         errorList.add("is null");
                 }

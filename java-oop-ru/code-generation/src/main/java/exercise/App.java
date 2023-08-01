@@ -10,13 +10,13 @@ import static java.nio.file.StandardOpenOption.CREATE;
 
 // BEGIN
 class App {
-    @lombok.SneakyThrows
-    public static void save(Path filePath, Car car) {
+
+    public static void save(Path filePath, Car car)
+            throws java.io.IOException {
         Files.writeString(filePath.toAbsolutePath().normalize(),
                 Car.serialize(car), CREATE);
     }
-    @lombok.SneakyThrows
-    public static Car extract(Path filePath) {
+    public static Car extract(Path filePath) throws java.io.IOException {
         return new ObjectMapper().readValue(filePath.toAbsolutePath().normalize().toFile(), Car.class);
     }
 }

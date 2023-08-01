@@ -14,13 +14,13 @@ class Car {
     User owner;
 
     // BEGIN
-    @lombok.SneakyThrows
-    public static String serialize(Car car) {
+
+    public static String serialize(Car car)
+            throws com.fasterxml.jackson.core.JsonProcessingException {
         return new ObjectMapper().writeValueAsString(car);
     }
 
-    @lombok.SneakyThrows
-    public static Car unserialize(String carJson) {
+    public static Car unserialize(String carJson) throws java.io.IOException {
         return new ObjectMapper().readValue(carJson, Car.class);
     }
 }

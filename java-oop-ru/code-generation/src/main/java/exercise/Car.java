@@ -22,7 +22,7 @@ class Car {
     @lombok.SneakyThrows
     public static Car unserialize(String carJson) {
         return new ObjectMapper().readValue(carJson, Car.class);
-        }
+    }
 }
     // END
 

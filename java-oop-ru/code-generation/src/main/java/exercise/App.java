@@ -9,9 +9,9 @@ import static java.nio.file.StandardOpenOption.CREATE;
 
 
 // BEGIN
-class App{
+class App {
     @lombok.SneakyThrows
-    public static void save(Path filePath, Car car){
+    public static void save(Path filePath, Car car) {
         Files.writeString(filePath.toAbsolutePath().normalize(),
                 Car.serialize(car), CREATE);
     }

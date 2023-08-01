@@ -1,10 +1,8 @@
 package exercise;
 
-import lombok.Value;
-
 // BEGIN
 @lombok.AllArgsConstructor
-@lombok.Data
+@lombok.Value
 // END
 class User {
     int id;
